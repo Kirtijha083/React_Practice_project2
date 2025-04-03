@@ -1,9 +1,11 @@
+import styles from "./Navigation.module.css";
+
 export default function Navber () {
   return (
-    <nav>
-      <div className="logo">
+    <nav className={`${styles.navigation} container`}>
+      {/* <div className="logo">
         <img src="/images/logo.png" alt="logo" />
-      </div>
+      </div> */}
       <ul>
         <li>Home</li>
         <li>About</li>
@@ -12,5 +14,3 @@ export default function Navber () {
     </nav>
   );
 }
-
-  //   <nav className={`${styles.navigation} container`}>

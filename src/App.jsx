@@ -1,5 +1,5 @@
 import './App.css'
-import Navber from './components/Navber'
+import Navber from './components/Navigation/Navber';
 
 function App() {
   
