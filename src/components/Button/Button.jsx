@@ -1,14 +1,24 @@
 import styles from "./Button.module.css";
-// import { MdMessage } from "react-icons/md";
 
-export default function Button (prop){
+
+export default function Button({isOutline, icon, text}) {
+// destructuring through making object........
+  // const {isOutline, icon, text} =props;
+
   return (
-    <button className={styles.primary_btn}>
-       {prop.icon}
-    {prop.text}   {/*iss trah se jsx me js ka use krte h curly bracket ke help se */}
+    <button className={isOutline ? styles.outline_btn : styles.primary_btn}>
+      {icon}
+      {text}   {/*iss trah se jsx me js ka use krte h curly bracket ke help se */}
     </button>
   );
 };
 
 
 // here we use 2 time btn component...with using props taki repetation na ho
+
+// NOTE:-- desturcturing se phele hmko sb ke saath props.icon, props.text, props.isOutline likhna hota h.........but iske baad jarurat nhi h
+
+// one more way to write destructuring....
+// export default function Button(props) {
+// destructuring through making object........
+// const {isOutline, icon, text} =props;
