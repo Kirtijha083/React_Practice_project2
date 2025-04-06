@@ -9,10 +9,10 @@ function App() {
     <>
      <Navber/>
 
-     <main className="main_container">
+   {/* <main className="main_container"> */}
      <ContactHeader/>
      <ContactForm/>
-     </main>
+     {/* </main> */}
     </>
   );
 }

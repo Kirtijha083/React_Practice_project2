@@ -10,12 +10,14 @@
   border-radius: 50%;
 } */
 
-.navigation{
+.navigation {
   padding: 0 8px;
   display: flex;
   height: 72px;
   align-items: center;
-  /* justify-content: space-between; */
+  /* position: sticky;
+  top: 0;
+  z-index: 10; */
 }
 
 .navigation ul {
