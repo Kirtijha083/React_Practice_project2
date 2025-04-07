@@ -1,12 +1,12 @@
 import styles from "./Button.module.css";
 
 
-export default function Button({isOutline, icon, text}) {
+export default function Button({isOutline, icon, text, ...rest}) {
 // destructuring through making object........
   // const {isOutline, icon, text} =props;
 
   return (
-    <button className={isOutline ? styles.outline_btn : styles.primary_btn}>
+    <button {...rest} className={isOutline ? styles.outline_btn : styles.primary_btn}>
       {icon}
       {text}   {/*iss trah se jsx me js ka use krte h curly bracket ke help se */}
     </button>
@@ -22,3 +22,7 @@ export default function Button({isOutline, icon, text}) {
 // export default function Button(props) {
 // destructuring through making object........
 // const {isOutline, icon, text} =props;
+
+// {...rest} iss property ko isly pass kiye qki...iske bina btn me koi or property work nhi krega....like onClick...
+// and isse hoga ki rest sara value isme spread ho ke aa jyega
+// yani isse sara event listener aa jata h
