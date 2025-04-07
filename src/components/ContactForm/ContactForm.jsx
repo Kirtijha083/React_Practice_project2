@@ -5,15 +5,27 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
 export default function ContactForm() {
 
+// let name;
+// let email;
+// let text;
+
+const [name, setName] = useState("Abc");
+const [email, setEmail] = useState("support@abc.com");
+const [text, setText] = useState("Hey:)");
+
 const onViaCallSubmit = () => {
   console.log("I am form call!");
 }
 
 const onSubmit = (event) => {
   event.preventDefault();
-  console.log("name:", event.target[0].value);
-  console.log("email:",event.target[1].value);
-  console.log("text:",event.target[2].value);
+  // console.log("name:", event.target[0].value);
+  // console.log("email:",event.target[1].value);
+  // console.log("text:",event.target[2].value);
+
+  name = event.target[0].value;
+  email = event.target[1].value;
+  text = event.target[2].value;
 }
 
   return (
@@ -48,6 +60,8 @@ const onSubmit = (event) => {
           >
             <Button text="SUBMIT BUTTON" />
           </div>
+          
+          <div>{name + " " + email + " " + text}</div>
 
         </form>
         
