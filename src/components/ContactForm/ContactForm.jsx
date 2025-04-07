@@ -3,30 +3,36 @@ import styles from "./ContactForm.module.css";
 import { MdMessage } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
+import {useState} from 'react'
+
 export default function ContactForm() {
 
-// let name;
-// let email;
-// let text;
+  // let name;
+  // let email;
+  // let text;
 
-const [name, setName] = useState("Abc");
-const [email, setEmail] = useState("support@abc.com");
-const [text, setText] = useState("Hey:)");
+  const [name, setName] = useState("Abc");
+  const [email, setEmail] = useState("support@abc.com");
+  const [text, setText] = useState("Hey:)");
 
-const onViaCallSubmit = () => {
-  console.log("I am form call!");
-}
+  const onViaCallSubmit = () => {
+    console.log("I am form call!");
+  }
 
-const onSubmit = (event) => {
-  event.preventDefault();
-  // console.log("name:", event.target[0].value);
-  // console.log("email:",event.target[1].value);
-  // console.log("text:",event.target[2].value);
+  const onSubmit = (event) => {
+    event.preventDefault();
+    // console.log("name:", event.target[0].value);
+    // console.log("email:",event.target[1].value);
+    // console.log("text:",event.target[2].value);
 
-  name = event.target[0].value;
-  email = event.target[1].value;
-  text = event.target[2].value;
-}
+    // name = event.target[0].value;
+    // email = event.target[1].value;
+    // text = event.target[2].value;
+
+    setName(event.target[0].value);
+    setEmail(event.target[1].value);
+    setText(event.target[2].value);
+  }
 
   return (
     <section className={styles.container}>
@@ -60,14 +66,14 @@ const onSubmit = (event) => {
           >
             <Button text="SUBMIT BUTTON" />
           </div>
-          
+
           <div>{name + " " + email + " " + text}</div>
 
         </form>
-        
+
       </div>
       <div className={styles.contact_image}>
-      <img src="/images/contact.svg" alt="contact image" />
+        <img src="/images/contact.svg" alt="contact image" />
       </div>
     </section>
 
